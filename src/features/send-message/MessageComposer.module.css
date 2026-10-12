@@ -1,0 +1,28 @@
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--c-panel-header);
+}
+
+.textarea {
+  flex: 1;
+  min-height: 42px;
+  max-height: 140px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--c-input);
+  resize: none;
+  outline: none;
+  field-sizing: content;
+}
+
+.send {
+  color: var(--c-text-muted);
+}
+
+.send:not(:disabled) {
+  color: var(--c-accent);
+}

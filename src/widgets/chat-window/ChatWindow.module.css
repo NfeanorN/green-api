@@ -1,0 +1,147 @@
+.window {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--c-chat-bg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 60px;
+  padding: 0 16px;
+  background: var(--c-panel-header);
+  border-left: 1px solid var(--c-border);
+}
+
+.back {
+  display: none;
+  margin-left: -8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--c-text-muted);
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 16px 6%;
+  overflow-y: auto;
+  list-style: none;
+  overscroll-behavior: contain;
+}
+
+.bubble {
+  position: relative;
+  max-width: min(65%, 560px);
+  padding: 6px 8px 8px 9px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.incoming {
+  align-self: flex-start;
+  background: var(--c-bubble-in);
+}
+
+.outgoing {
+  align-self: flex-end;
+  background: var(--c-bubble-out);
+}
+
+.incoming + .outgoing,
+.outgoing + .incoming {
+  margin-top: 10px;
+}
+
+.meta {
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin: 6px 0 -4px 12px;
+  font-size: 11px;
+  color: var(--c-text-muted);
+  white-space: nowrap;
+}
+
+.status {
+  display: inline-flex;
+}
+
+.read {
+  color: var(--c-read);
+}
+
+.failed {
+  color: var(--c-danger);
+}
+
+.retry {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--c-danger);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.retry:hover {
+  text-decoration: underline;
+}
+
+.placeholder {
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  padding: 32px;
+  text-align: center;
+  color: var(--c-text-muted);
+  background: var(--c-panel-header);
+  border-bottom: 6px solid var(--c-accent);
+}
+
+.placeholder h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--c-text);
+}
+
+.placeholder p {
+  margin: 0;
+  max-width: 440px;
+}
+
+@media (max-width: 720px) {
+  .back {
+    display: inline-flex;
+  }
+
+  .messages {
+    padding: 12px;
+  }
+
+  .bubble {
+    max-width: 85%;
+  }
+}

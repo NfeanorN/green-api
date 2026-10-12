@@ -1,0 +1,27 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 30%) 1fr;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  .layout {
+    height: calc(100% - 38px);
+    margin-top: 19px;
+    box-shadow: 0 6px 18px rgb(11 20 26 / 5%);
+  }
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .layout[data-chat-open='true'] .sidebar,
+  .layout[data-chat-open='false'] .window {
+    display: none;
+  }
+}

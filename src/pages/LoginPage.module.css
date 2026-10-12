@@ -1,0 +1,32 @@
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: linear-gradient(var(--c-accent) 0 220px, var(--c-bg) 220px);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--c-panel);
+  box-shadow: 0 17px 50px 0 rgb(11 20 26 / 19%);
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.text {
+  margin: 0 0 24px;
+  color: var(--c-text-muted);
+  font-size: 14px;
+}
+
+.text a {
+  color: var(--c-accent);
+}
