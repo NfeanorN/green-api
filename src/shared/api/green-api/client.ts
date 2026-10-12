@@ -18,7 +18,7 @@ export interface GreenApiClient {
 }
 
 export function createGreenApiClient({ idInstance, apiTokenInstance }: GreenApiCredentials): GreenApiClient {
-  const base = `https://${idInstance.slice(0, 4)}.api.greenapi.com`
+  const base = `https://${idInstance.slice(0, 4)}.api.green-api.com`
   const url = (method: string, suffix = '') => `${base}/waInstance${idInstance}/${method}/${apiTokenInstance}${suffix}`
 
   return {
